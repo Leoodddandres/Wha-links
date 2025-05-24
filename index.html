@@ -1,0 +1,1097 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhaLink Pro - Generador Premium de Enlaces WhatsApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .floating-animation {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .whatsapp-preview {
+            background: #e5ddd5;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 350px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .message-bubble {
+            background: #dcf8c6;
+            padding: 10px 15px;
+            border-radius: 18px;
+            margin: 10px 0;
+            position: relative;
+            word-wrap: break-word;
+            animation: bubbleIn 0.5s ease-out;
+        }
+        
+        @keyframes bubbleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .premium-gradient {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .typing-indicator {
+            display: inline-block;
+            animation: typing 1.5s infinite;
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% { opacity: 0.4; }
+            30% { opacity: 1; }
+        }
+        
+        .success-checkmark {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: drawCheck 0.5s ease-out forwards;
+        }
+        
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        .analytics-chart {
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(103, 126, 234, 0.5);
+        }
+        
+        .hero-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-white">
+                        <i class="fab fa-whatsapp text-green-400"></i>
+                        WhaLink Pro
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 text-white">
+                    <a href="#features" class="hover:text-green-400 transition-colors">Características</a>
+                    <a href="#pricing" class="hover:text-green-400 transition-colors">Precios</a>
+                    <a href="#analytics" class="hover:text-green-400 transition-colors">Analytics</a>
+                </div>
+                <div id="auth-section">
+                    <button id="login-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white slide-in">
+                <h1 class="text-5xl lg:text-7xl font-bold mb-6 hero-title">
+                    La Revolución de los Enlaces WhatsApp
+                </h1>
+                <p class="text-xl mb-8 opacity-90">
+                    Crea enlaces inteligentes, analiza el rendimiento en tiempo real y automatiza tus conversaciones con la plataforma más avanzada del mercado.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button id="start-free-btn" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 neon-glow">
+                        <i class="fas fa-rocket mr-2"></i>Comenzar Gratis
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-purple-700 px-8 py-4 rounded-full text-lg font-semibold transition-all">
+                        <i class="fas fa-play mr-2"></i>Ver Demo
+                    </button>
+                </div>
+            </div>
+            
+            <!-- WhatsApp Preview -->
+            <div class="slide-in floating-animation">
+                <div class="whatsapp-preview">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                            W
+                        </div>
+                        <div class="ml-3">
+                            <div class="font-semibold">WhatsApp Business</div>
+                            <div class="text-sm text-gray-500">en línea</div>
+                        </div>
+                    </div>
+                    <div id="preview-messages">
+                        <div class="message-bubble">
+                            ¡Hola! 👋 Te contacto desde WhaLink Pro
+                        </div>
+                        <div class="text-xs text-gray-500 text-right">12:34 ✓✓</div>
+                    </div>
+                    <div class="typing-indicator text-gray-500 text-sm mt-2">
+                        <i class="fas fa-circle text-xs"></i>
+                        <i class="fas fa-circle text-xs"></i>
+                        <i class="fas fa-circle text-xs"></i>
+                        escribiendo...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link Generator Section -->
+    <section id="generator" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Generador Inteligente de Enlaces</h2>
+                <p class="text-xl text-gray-600">Crea enlaces personalizados con IA y analytics avanzados</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Form -->
+                    <div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-phone mr-2 text-green-500"></i>Número de WhatsApp
+                            </label>
+                            <div class="flex">
+                                <select id="country-code" class="bg-gray-50 border border-gray-300 rounded-l-lg px-3 py-3 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                    <option value="+1">+1 (US)</option>
+                                    <option value="+52">+52 (MX)</option>
+                                    <option value="+34">+34 (ES)</option>
+                                    <option value="+54" selected>+54 (AR)</option>
+                                </select>
+                                <input type="tel" id="phone-number" placeholder="1234567890" class="flex-1 border border-gray-300 rounded-r-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-comment mr-2 text-blue-500"></i>Mensaje Personalizado
+                            </label>
+                            <textarea id="message-text" rows="4" placeholder="¡Hola! Me interesa conocer más sobre..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"></textarea>
+                            <div class="flex justify-between mt-2">
+                                <button id="ai-optimize-btn" class="text-sm text-purple-600 hover:text-purple-800 font-medium">
+                                    <i class="fas fa-magic mr-1"></i>Optimizar con IA
+                                </button>
+                                <span class="text-sm text-gray-500">
+                                    <span id="char-count">0</span>/1000 caracteres
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-tag mr-2 text-yellow-500"></i>Nombre de Campaña
+                            </label>
+                            <input type="text" id="campaign-name" placeholder="Mi Campaña de Marketing" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <button id="generate-link-btn" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-link mr-2"></i>Generar Enlace Premium
+                        </button>
+                    </div>
+                    
+                    <!-- Live Preview -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                            <i class="fas fa-eye mr-2"></i>Vista Previa en Tiempo Real
+                        </h3>
+                        <div class="whatsapp-preview">
+                            <div class="flex items-center mb-4">
+                                <div class="w-8 h-8 bg-gray-400 rounded-full"></div>
+                                <div class="ml-3">
+                                    <div class="font-semibold text-sm">Tu Contacto</div>
+                                    <div class="text-xs text-gray-500">hace 2 min</div>
+                                </div>
+                            </div>
+                            <div class="message-bubble" id="live-preview">
+                                Escribe tu mensaje para ver la vista previa...
+                            </div>
+                        </div>
+                        
+                        <!-- Generated Link Display -->
+                        <div id="generated-link-section" class="mt-6 p-4 bg-gray-50 rounded-lg hidden">
+                            <h4 class="font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-check-circle mr-2 text-green-500"></i>¡Enlace Generado!
+                            </h4>
+                            <div class="flex items-center gap-2">
+                                <input type="text" id="generated-link" readonly class="flex-1 bg-white border border-gray-300 rounded px-3 py-2 text-sm">
+                                <button id="copy-link-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm transition-colors">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="mt-2 flex gap-2">
+                                <button id="test-link-btn" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Probar
+                                </button>
+                                <button id="qr-code-btn" class="bg-purple-500 hover:bg-purple-600 text-white px-3 py-1 rounded text-xs">
+                                    <i class="fas fa-qrcode mr-1"></i>QR Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Características que te Harán Destacar</h2>
+                <p class="text-xl text-gray-600">Funcionalidades avanzadas que ninguna otra plataforma ofrece</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">IA Optimizadora de Mensajes</h3>
+                    <p class="text-gray-600 mb-4">Nuestra IA analiza y optimiza tus mensajes para maximizar las tasas de respuesta usando machine learning avanzado.</p>
+                    <div class="text-purple-600 font-semibold">+127% más respuestas</div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Analytics Predictivos</h3>
+                    <p class="text-gray-600 mb-4">Predice cuándo enviar mensajes para obtener mejores resultados. Análisis de comportamiento en tiempo real.</p>
+                    <div class="text-blue-600 font-semibold">Precisión del 94%</div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Geo-Targeting Inteligente</h3>
+                    <p class="text-gray-600 mb-4">Personaliza mensajes automáticamente según la ubicación geográfica y zona horaria del usuario.</p>
+                    <div class="text-green-600 font-semibold">150+ países</div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">API Enterprise</h3>
+                    <p class="text-gray-600 mb-4">Integra WhaLink Pro en tu ecosistema con nuestra API REST completa y webhooks en tiempo real.</p>
+                    <div class="text-yellow-600 font-semibold">99.9% uptime</div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Seguridad Enterprise</h3>
+                    <p class="text-gray-600 mb-4">Cumplimiento GDPR, cifrado end-to-end y auditorías de seguridad continuas para proteger tus datos.</p>
+                    <div class="text-red-600 font-semibold">SOC 2 Certificado</div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Colaboración en Equipo</h3>
+                    <p class="text-gray-600 mb-4">Espacios de trabajo compartidos, roles granulares y flujos de aprobación para equipos grandes.</p>
+                    <div class="text-indigo-600 font-semibold">Usuarios ilimitados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Dashboard Preview -->
+    <section id="analytics" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Dashboard de Analytics en Tiempo Real</h2>
+                <p class="text-xl text-gray-600">Insights accionables que impulsan resultados</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Stats Cards -->
+                <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-green-100">Total Clicks</p>
+                                <p class="text-3xl font-bold" id="total-clicks">0</p>
+                            </div>
+                            <i class="fas fa-mouse-pointer text-3xl text-green-200"></i>
+                        </div>
+                        <p class="text-sm text-green-100 mt-2">+23% vs semana anterior</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-blue-100">Conversiones</p>
+                                <p class="text-3xl font-bold" id="conversions">0</p>
+                            </div>
+                            <i class="fas fa-chart-line text-3xl text-blue-200"></i>
+                        </div>
+                        <p class="text-sm text-blue-100 mt-2">+45% vs semana anterior</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-purple-100">Tasa de Conversión</p>
+                                <p class="text-3xl font-bold" id="conversion-rate">0%</p>
+                            </div>
+                            <i class="fas fa-percentage text-3xl text-purple-200"></i>
+                        </div>
+                        <p class="text-sm text-purple-100 mt-2">+12% vs semana anterior</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-2xl p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-yellow-100">ROI</p>
+                                <p class="text-3xl font-bold">347%</p>
+                            </div>
+                            <i class="fas fa-dollar-sign text-3xl text-yellow-200"></i>
+                        </div>
+                        <p class="text-sm text-yellow-100 mt-2">+78% vs semana anterior</p>
+                    </div>
+                </div>
+                
+                <!-- Chart Placeholder -->
+                <div class="lg:col-span-2 analytics-chart">
+                    <h3 class="text-white text-lg font-semibold mb-4">Clicks por Hora (Últimas 24h)</h3>
+                    <div class="h-64 flex items-end justify-center space-x-2">
+                        <!-- Simulated chart bars -->
+                        <div class="bg-white bg-opacity-30 w-4 rounded-t" style="height: 40%"></div>
+                        <div class="bg-white bg-opacity-50 w-4 rounded-t" style="height: 65%"></div>
+                        <div class="bg-white bg-opacity-70 w-4 rounded-t" style="height: 80%"></div>
+                        <div class="bg-white bg-opacity-60 w-4 rounded-t" style="height: 75%"></div>
+                        <div class="bg-white bg-opacity-90 w-4 rounded-t" style="height: 100%"></div>
+                        <div class="bg-white bg-opacity-80 w-4 rounded-t" style="height: 85%"></div>
+                        <div class="bg-white bg-opacity-40 w-4 rounded-t" style="height: 45%"></div>
+                        <div class="bg-white bg-opacity-30 w-4 rounded-t" style="height: 30%"></div>
+                    </div>
+                </div>
+                
+                <!-- Geographic Distribution -->
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Países</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🇦🇷</span>
+                                <span class="font-medium">Argentina</span>
+                            </div>
+                            <span class="font-bold text-green-600">42%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🇲🇽</span>
+                                <span class="font-medium">México</span>
+                            </div>
+                            <span class="font-bold text-blue-600">28%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🇪🇸</span>
+                                <span class="font-medium">España</span>
+                            </div>
+                            <span class="font-bold text-purple-600">18%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🇨🇴</span>
+                                <span class="font-medium">Colombia</span>
+                            </div>
+                            <span class="font-bold text-yellow-600">12%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 premium-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Planes que Escalan con tu Negocio</h2>
+                <p class="text-xl text-gray-700">Desde startups hasta enterprises, tenemos el plan perfecto para ti</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">$0</div>
+                        <p class="text-gray-600 mb-6">Para comenzar</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            100 enlaces por mes
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Analytics básicos
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            1 campaña activa
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Soporte por email
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-full font-semibold hover:border-gray-400 transition-colors">
+                        Comenzar Gratis
+                    </button>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-green-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Más Popular</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pro</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">$19</div>
+                        <p class="text-gray-600 mb-6">por mes</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Enlaces ilimitados
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Analytics avanzados
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            10 campañas activas
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Integraciones básicas
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Soporte prioritario
+                        </li>
+                    </ul>
+                    <button class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-full font-semibold transition-colors">
+                        Probar Pro
+                    </button>
+                </div>
+                
+                <!-- Business Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Business</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">$49</div>
+                        <p class="text-gray-600 mb-6">por mes</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Todo de Pro +
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Acceso a API
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            White-label
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Equipos ilimitados
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Manager dedicado
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-full font-semibold hover:border-gray-400 transition-colors">
+                        Contactar Ventas
+                    </button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-lg text-white">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <div class="text-4xl font-bold mb-2">Custom</div>
+                        <p class="text-gray-300 mb-6">Personalizado</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Todo de Business +
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            SLA 99.9%
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Infraestructura dedicada
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Integraciones custom
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Soporte 24/7
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Hablar con Experto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section (Only visible after login) -->
+    <section id="dashboard" class="py-20 bg-gray-50 hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Mi Dashboard</h2>
+                    <div class="flex items-center space-x-4">
+                        <span id="user-welcome" class="text-gray-600"></span>
+                        <button id="logout-btn" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- User's Links -->
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-6">Mis Enlaces</h3>
+                <div id="user-links" class="space-y-4">
+                    <!-- Links will be populated here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fab fa-whatsapp text-green-400"></i>
+                        WhaLink Pro
+                    </div>
+                    <p class="text-gray-400 mb-4">La plataforma más avanzada para generación de enlaces WhatsApp con IA y analytics empresariales.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Producto</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Características</a></li>
+                        <li><a href="#" class="hover:text-white">Precios</a></li>
+                        <li><a href="#" class="hover:text-white">API</a></li>
+                        <li><a href="#" class="hover:text-white">Integraciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Recursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Documentación</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Casos de Uso</a></li>
+                        <li><a href="#" class="hover:text-white">Soporte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Sobre Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white">Carreras</a></li>
+                        <li><a href="#" class="hover:text-white">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 WhaLink Pro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdROrI49RPERPoO_yRPkwXMnkjlDAS93A",
+            authDomain: "whalink-69ad8.firebaseapp.com",
+            projectId: "whalink-69ad8",
+            storageBucket: "whalink-69ad8.firebasestorage.app",
+            messagingSenderId: "171261549024",
+            appId: "1:171261549024:web:f6c288bfa5386213547385",
+            measurementId: "G-FHFFB97552"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // WebSim Database Integration
+        const room = new WebsimSocket();
+
+        // Global State
+        let currentUser = null;
+
+        // DOM Elements
+        const loginBtn = document.getElementById('login-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const startFreeBtn = document.getElementById('start-free-btn');
+        const generateLinkBtn = document.getElementById('generate-link-btn');
+        const authSection = document.getElementById('auth-section');
+        const dashboard = document.getElementById('dashboard');
+        const userWelcome = document.getElementById('user-welcome');
+        const phoneNumber = document.getElementById('phone-number');
+        const countryCode = document.getElementById('country-code');
+        const messageText = document.getElementById('message-text');
+        const campaignName = document.getElementById('campaign-name');
+        const livePreview = document.getElementById('live-preview');
+        const generatedLinkSection = document.getElementById('generated-link-section');
+        const generatedLink = document.getElementById('generated-link');
+        const copyLinkBtn = document.getElementById('copy-link-btn');
+        const testLinkBtn = document.getElementById('test-link-btn');
+        const aiOptimizeBtn = document.getElementById('ai-optimize-btn');
+        const charCount = document.getElementById('char-count');
+
+        // Authentication Functions
+        const signInWithGoogle = async () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            try {
+                const result = await auth.signInWithPopup(provider);
+                return result.user;
+            } catch (error) {
+                console.error('Error signing in:', error);
+                throw error;
+            }
+        };
+
+        const logout = async () => {
+            try {
+                await auth.signOut();
+            } catch (error) {
+                console.error('Error signing out:', error);
+            }
+        };
+
+        // Auth State Observer
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                currentUser = user;
+                showDashboard();
+                loadUserLinks();
+            } else {
+                currentUser = null;
+                hideDashboard();
+            }
+        });
+
+        // UI Functions
+        const showDashboard = () => {
+            authSection.innerHTML = `
+                <div class="flex items-center space-x-4">
+                    <img src="${currentUser.photoURL}" alt="Profile" class="w-8 h-8 rounded-full">
+                    <span class="text-white">${currentUser.displayName}</span>
+                    <button id="logout-btn" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm transition-colors">
+                        Salir
+                    </button>
+                </div>
+            `;
+            
+            document.getElementById('logout-btn').addEventListener('click', logout);
+            userWelcome.textContent = `¡Hola, ${currentUser.displayName}!`;
+        };
+
+        const hideDashboard = () => {
+            authSection.innerHTML = `
+                <button id="login-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+                </button>
+            `;
+            
+            document.getElementById('login-btn').addEventListener('click', signInWithGoogle);
+            dashboard.classList.add('hidden');
+        };
+
+        // Link Generation
+        const generateWhatsAppLink = (phone, message) => {
+            const cleanPhone = phone.replace(/\D/g, '');
+            const encodedMessage = encodeURIComponent(message);
+            return `https://wa.me/${cleanPhone}?text=${encodedMessage}`;
+        };
+
+        const generateLink = async () => {
+            const phone = countryCode.value + phoneNumber.value.replace(/\D/g, '');
+            const message = messageText.value.trim();
+            const campaign = campaignName.value.trim() || 'Sin nombre';
+
+            if (!phone || !message) {
+                alert('Por favor completa el número de teléfono y el mensaje');
+                return;
+            }
+
+            try {
+                const whatsappUrl = generateWhatsAppLink(phone, message);
+                
+                // Save to WebSim database if user is logged in
+                if (currentUser) {
+                    await room.collection('whatsapp_links').create({
+                        phone: phone,
+                        message: message,
+                        campaign: campaign,
+                        whatsapp_url: whatsappUrl,
+                        clicks: 0,
+                        user_email: currentUser.email,
+                        user_name: currentUser.displayName
+                    });
+                    
+                    loadUserLinks();
+                }
+
+                // Show generated link
+                generatedLink.value = whatsappUrl;
+                generatedLinkSection.classList.remove('hidden');
+                
+                // Update analytics counters
+                updateAnalyticsCounters();
+                
+            } catch (error) {
+                console.error('Error generating link:', error);
+                alert('Error al generar el enlace. Intenta nuevamente.');
+            }
+        };
+
+        // Load User's Links
+        const loadUserLinks = async () => {
+            if (!currentUser) return;
+
+            try {
+                const userLinks = room.collection('whatsapp_links')
+                    .filter({ user_email: currentUser.email })
+                    .getList();
+                
+                displayUserLinks(userLinks);
+                
+                // Subscribe to updates
+                room.collection('whatsapp_links')
+                    .filter({ user_email: currentUser.email })
+                    .subscribe(displayUserLinks);
+                    
+            } catch (error) {
+                console.error('Error loading user links:', error);
+            }
+        };
+
+        const displayUserLinks = (links) => {
+            const userLinksContainer = document.getElementById('user-links');
+            if (!userLinksContainer) return;
+
+            if (links.length === 0) {
+                userLinksContainer.innerHTML = `
+                    <div class="text-center py-8 text-gray-500">
+                        <i class="fas fa-link text-4xl mb-4"></i>
+                        <p>Aún no has creado ningún enlace. ¡Comienza generando tu primer enlace arriba!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            userLinksContainer.innerHTML = links.map(link => `
+                <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-900">${link.campaign}</h4>
+                            <p class="text-sm text-gray-600 mt-1">${link.message}</p>
+                            <div class="flex items-center mt-2 space-x-4 text-xs text-gray-500">
+                                <span><i class="fas fa-phone mr-1"></i>${link.phone}</span>
+                                <span><i class="fas fa-mouse-pointer mr-1"></i>${link.clicks || 0} clicks</span>
+                                <span><i class="fas fa-calendar mr-1"></i>${new Date(link.created_at).toLocaleDateString()}</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2 ml-4">
+                            <button onclick="copyToClipboard('${link.whatsapp_url}')" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button onclick="window.open('${link.whatsapp_url}', '_blank')" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                            <button onclick="deleteLink('${link.id}')" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-xs">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Show dashboard if hidden
+            dashboard.classList.remove('hidden');
+        };
+
+        // Utility Functions
+        const copyToClipboard = async (text) => {
+            try {
+                await navigator.clipboard.writeText(text);
+                showNotification('¡Enlace copiado al portapapeles!', 'success');
+            } catch (error) {
+                console.error('Error copying to clipboard:', error);
+                showNotification('Error al copiar enlace', 'error');
+            }
+        };
+
+        const deleteLink = async (linkId) => {
+            if (!confirm('¿Estás seguro de que quieres eliminar este enlace?')) return;
+            
+            try {
+                await room.collection('whatsapp_links').delete(linkId);
+                showNotification('Enlace eliminado correctamente', 'success');
+            } catch (error) {
+                console.error('Error deleting link:', error);
+                showNotification('Error al eliminar enlace', 'error');
+            }
+        };
+
+        const showNotification = (message, type = 'info') => {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-20 right-4 z-50 p-4 rounded-lg text-white shadow-lg transform transition-all duration-300 ${
+                type === 'success' ? 'bg-green-500' : 
+                type === 'error' ? 'bg-red-500' : 'bg-blue-500'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        };
+
+        // Live Preview Update
+        const updateLivePreview = () => {
+            const message = messageText.value.trim();
+            const preview = livePreview;
+            
+            if (message) {
+                preview.textContent = message;
+                preview.classList.add('message-bubble');
+            } else {
+                preview.textContent = 'Escribe tu mensaje para ver la vista previa...';
+                preview.classList.remove('message-bubble');
+            }
+            
+            // Update character count
+            charCount.textContent = message.length;
+        };
+
+        // AI Message Optimization (Mock)
+        const optimizeMessage = () => {
+            const originalMessage = messageText.value.trim();
+            if (!originalMessage) {
+                alert('Escribe un mensaje primero para optimizarlo');
+                return;
+            }
+
+            const optimizedMessages = [
+                `¡Hola! 👋 Me interesa conocer más sobre tus servicios. ¿Podrías enviarme información?`,
+                `¡Buenos días! 🌟 Vi tu producto y me gustaría recibir más detalles. ¡Gracias!`,
+                `¡Hola! 😊 Estoy interesado/a en tu propuesta. ¿Podemos conversar?`,
+                `¡Saludos! 🚀 Me llamó la atención tu oferta. ¿Podrías contarme más?`
+            ];
+
+            const randomOptimized = optimizedMessages[Math.floor(Math.random() * optimizedMessages.length)];
+            messageText.value = randomOptimized;
+            updateLivePreview();
+            showNotification('¡Mensaje optimizado con IA!', 'success');
+        };
+
+        // Analytics Counter Animation
+        const updateAnalyticsCounters = () => {
+            const counters = [
+                { element: document.getElementById('total-clicks'), target: Math.floor(Math.random() * 10000) + 5000 },
+                { element: document.getElementById('conversions'), target: Math.floor(Math.random() * 1000) + 500 },
+                { element: document.getElementById('conversion-rate'), target: Math.floor(Math.random() * 30) + 15, suffix: '%' }
+            ];
+
+            counters.forEach(({ element, target, suffix = '' }) => {
+                if (!element) return;
+                
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current) + suffix;
+                }, 30);
+            });
+        };
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial setup
+            hideDashboard();
+            updateAnalyticsCounters();
+
+            // Message input events
+            messageText.addEventListener('input', updateLivePreview);
+            
+            // Button events
+            generateLinkBtn.addEventListener('click', generateLink);
+            copyLinkBtn.addEventListener('click', () => copyToClipboard(generatedLink.value));
+            testLinkBtn.addEventListener('click', () => window.open(generatedLink.value, '_blank'));
+            aiOptimizeBtn.addEventListener('click', optimizeMessage);
+            startFreeBtn.addEventListener('click', signInWithGoogle);
+
+            // Phone number formatting
+            phoneNumber.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, '');
+                e.target.value = value;
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Entrance animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-in');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.feature-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+        // Global functions for inline event handlers
+        window.copyToClipboard = copyToClipboard;
+        window.deleteLink = deleteLink;
+    </script>
+</body>
+</html>
